@@ -1,5 +1,6 @@
 const paths = require('react-scripts/config/paths');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { injectBabelPlugin } = require('react-app-rewired');
 const rewireLess = require('react-app-rewire-less-modules');
 
@@ -100,6 +101,9 @@ module.exports = {
       });
       config.plugins = replacePlugin(config.plugins, (name) => /HtmlWebpackPlugin/i.test(name), indexHtmlPlugin);
       config.plugins.push(adminHtmlPlugin);
+      config.plugins.push(
+        new BundleAnalyzerPlugin({generateStatsFile: true})
+      );
     }
     return config;
   },

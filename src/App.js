@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Test from './Test';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <Test />
         </header>
       </div>
     );

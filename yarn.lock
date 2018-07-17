@@ -3527,6 +3527,10 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-config-alloy@^1.4.2:
+  version "1.4.2"
+  resolved "http://registry.npm.taobao.org/eslint-config-alloy/download/eslint-config-alloy-1.4.2.tgz#7dcb015992a6598055679483103badf55534a0a6"
+
 eslint-config-react-app@3.0.0-next.3e165448:
   version "3.0.0-next.3e165448"
   resolved "http://registry.npm.taobao.org/eslint-config-react-app/download/eslint-config-react-app-3.0.0-next.3e165448.tgz#7ccaaeef06c4a5b7eac8477587fd02a86e1729da"

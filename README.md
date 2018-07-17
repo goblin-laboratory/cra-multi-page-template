@@ -57,6 +57,7 @@ yarn babel-plugin-import react-app-rewire-less-modules webpack-bundle-analyzer -
 * babel-plugin-import : antd 按需加载
 * react-app-rewire-less-modules : less 支持与 less module
 * webpack-bundle-analyzer : build 统计工具
+* eslint-config-alloy : eslint 模板
 
 
 ## 参考资料

@@ -58,6 +58,7 @@ yarn babel-plugin-import react-app-rewire-less-modules webpack-bundle-analyzer -
 * react-app-rewire-less-modules : less 支持与 less module
 * webpack-bundle-analyzer : build 统计工具
 
+
 ## 参考资料
 * [修改create-react-app支持多入口](http://imshuai.com/create-react-app-multiple-entry-points/)
 * [Add more entry points](https://github.com/facebook/create-react-app/issues/1084)
@@ -78,3 +79,11 @@ URIError: Failed to decode param '/%PUBLIC_URL%/favicon.ico'
     at D:\github\cra\node_modules\express\lib\router\index.js:284:7
     at Function.process_params (D:\github\cra\node_modules\express\lib\router\index.js:335:12)
 ```
+
+## Contributing
+我们非常欢迎你的贡献，你可以通过以下方式和我们一起共建 😃：
+* 通过 Issue 报告 bug 或进行咨询。
+* 提交 Pull Request 。
+
+## Licensing
+cra is [MIT licensed](./LICENSE).

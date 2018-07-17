@@ -63,6 +63,8 @@ yarn babel-plugin-import react-app-rewire-less-modules webpack-bundle-analyzer -
 * [修改create-react-app支持多入口](http://imshuai.com/create-react-app-multiple-entry-points/)
 * [Add more entry points](https://github.com/facebook/create-react-app/issues/1084)
 * [react-app-rewired](https://github.com/timarney/react-app-rewired)
+* [在 create-react-app 中使用 antd](https://ant.design/docs/react/use-with-create-react-app-cn)
+* [以react-script重构antd-pro](https://xuqiang.me/%E4%BB%A5react-script%E9%87%8D%E6%9E%84antd-pro.html)
 
 ## 遗留问题
 ### Failed to decode param '/%PUBLIC_URL%/favicon.ico'

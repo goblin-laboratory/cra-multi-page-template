@@ -8,6 +8,11 @@ class Test extends Component {
       <div className={styles.container}>
         <div className={styles.primaryText}>Primary Text</div>
         <div><Button type="primary">Primary Text</Button></div>
+        <div>
+          <a href="./index.html">index.html</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="./admin.html">admin.html</a>
+        </div>
       </div>
     );
   }

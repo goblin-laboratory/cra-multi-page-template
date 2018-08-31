@@ -7673,9 +7673,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-app-rewire-entry@https://github.com/goblin-laboratory/react-app-rewire-entry.git":
-  version "1.0.0"
-  resolved "https://github.com/goblin-laboratory/react-app-rewire-entry.git#7585649b6a71f1effc9968130f6836405bd71b64"
+react-app-rewire-entry@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/react-app-rewire-entry/download/react-app-rewire-entry-1.0.2.tgz#7e145fcadfe9a0ce1138f05138b6f6424ac44332"
   dependencies:
     html-webpack-plugin "^3.2.0"
 

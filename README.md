@@ -1,92 +1,236 @@
-# [Create React App](https://github.com/facebook/create-react-app) 配置指南
-https://github.com/goblin-laboratory/cra
+# project can not work after update react-scripts form 2.0.0-next.a671462c to  2.0.0
 
-## 介绍
-使用 react-app-rewired 配置 Create React App 指南
+<!--
+  PLEASE READ THE FIRST SECTION :-)
+-->
 
-## 功能特性
-* 多页应用
-* antd 按需加载
-* less module
+### Is this a bug report?
+yes
 
-## 效果预览
-![](./images/snapshot-1.png)
+<!--
+  If you answered "Yes":
 
-## 使用
+    Please note that your issue will be fixed much faster if you spend about
+    half an hour preparing it, including the exact reproduction steps and a demo.
+
+    If you're in a hurry or don't feel confident, it's fine to report bugs with
+    less details, but this makes it less likely they'll get fixed soon.
+
+    In either case, please fill as many fields below as you can.
+
+  If you answered "No":
+
+    If this is a question or a discussion, you may delete this template and write in a free form.
+    Note that we don't provide help for webpack questions after ejecting.
+    You can find webpack docs at https://webpack.js.org/.
+-->
+
+### Did you try recovering your dependencies?
+
+<!--
+  Your module tree might be corrupted, and that might be causing the issues.
+  Let's try to recover it. First, delete these files and folders in your project:
+
+    * node_modules
+    * package-lock.json
+    * yarn.lock
+
+  Then you need to decide which package manager you prefer to use.
+  We support both npm (https://npmjs.com) and yarn (http://yarnpkg.com/).
+  However, **they can't be used together in one project** so you need to pick one.
+
+  If you decided to use npm, run this in your project directory:
+
+    npm install -g npm@latest
+    npm install
+
+  This should fix your project.
+
+  If you decided to use yarn, update it first (https://yarnpkg.com/en/docs/install).
+  Then run in your project directory:
+
+    yarn
+
+  This should fix your project.
+
+  Importantly, **if you decided to use yarn, you should never run `npm install` in the project**.
+  For example, yarn users should run `yarn add <library>` instead of `npm install <library>`.
+  Otherwise your project will break again.
+
+  Have you done all these steps and still see the issue?
+  Please paste the output of `npm --version` and/or `yarn --version` to confirm.
+-->
+
+yes
+
+### Which terms did you search for in User Guide?
+
+<!--
+  There are a few common documented problems, such as watcher not detecting changes, or build failing.
+  They are described in the Troubleshooting section of the User Guide:
+
+  https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#troubleshooting
+
+  Please scan these few sections for common problems.
+  Additionally, you can search the User Guide itself for something you're having issues with:
+
+  https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md
+
+  If you didn't find the solution, please share which words you searched for.
+  This helps us improve documentation for future readers who might encounter the same problem.
+-->
+
+"Updating to New Releases", "Migrating from 2.0.0-next.xyz"
+
+
+### Environment
+
+<!--
+  To help identify if a problem is specific to a platform, browser, or module version, information about your environment is required.
+  This enables the maintainers quickly reproduce the issue and give feedback.
+
+  Run the following command in your React app's folder in terminal.
+  Note: The result is copied to your clipboard directly.
+
+  `npx create-react-app --info`
+
+  Paste the output of the command in the section below.
+-->
+
+(paste the output of the command here)
+
+### Steps to Reproduce
+
+<!--
+  How would you describe your issue to someone who doesn’t know you or your project?
+  Try to write a sequence of steps that anybody can repeat to see the issue.
+-->
+
+(Write your steps here:)
+
+1. init project with react-scripts@2.0.0-next.a671462c
+```sh
+$ create-react-app app --scripts-version 2.0.0-next.a671462c
 ```
-$ git clone https://github.com/goblin-laboratory/cra.git
-$ cd cra
-$ yarn install
-$ yarn start    # 访问 http://localhost:3000
+2. add dva and modify `src/index.js`
+```sh
+$ cd app
+$ yarn add dva
+```
+```js
+// src/index.js
+import React from 'react';
+import dva from 'dva';
+import createHistory from 'history/createHashHistory';
+
+// 1. Initialize
+const app = dva({
+  history: createHistory(),
+});
+
+// 2. Plugins
+// app.use({});
+
+// 3. Register global model
+// app.model(require('../models/index').default);
+
+// 4. Router
+app.router(() => <div>Test</div>);
+
+// 5. Start
+app.start('#root');
+```
+3. The project can be successfully started
+```sh
+$ yarn start
+yarn run v1.5.1
+$ react-scripts start
+Starting the development server...
+Compiled successfully!
+
+You can now view app in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.30.22:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+4. update react-scripts to 2.0.0, project can not work any more.
+```sh
+$ yarn add --exact react-scripts@2.0.0
+$ yarn start
+yarn run v1.5.1
+$ react-scripts start
+Starting the development server...
+Failed to compile.
+
+./node_modules/dva-core/lib/index.js
+Module not found: Can't resolve '@babel/runtime/core-js/get-iterator' in 'D:\git
+hub\app\node_modules\dva-core\lib'
+Compiling...
+Failed to compile.
+
+./node_modules/dva-core/lib/index.js
+Module not found: Can't resolve '@babel/runtime/core-js/get-iterator' in 'D:\git
+hub\app\node_modules\dva-core\lib'
+
 ```
 
-## 配置过程记录
 
-### 全局安装 Create-React-App
-```
-$ yarn global add create-react-app@next
-yarn global v1.5.1
-warning ..\package.json: No license field
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-info fsevents@1.2.4: The platform "win32" is incompatible with this module.
-info "fsevents@1.2.4" is an optional dependency and failed compatibility check. Excluding it from installation.
-[3/4] Linking dependencies...
-[4/4] Building fresh packages...
-success Installed "create-react-app@2.0.0-next.3e165448" with binaries:
-      - create-react-app
-Done in 8.20s.
-```
+### Expected Behavior
 
-### 使用 `create-react-app` 命令生成项目
-```
-create-react-app v2 --scripts-version react-scripts@2.0.0-next.3e165448
-```
+<!--
+  How did you expect the tool to behave?
+  It’s fine if you’re not sure your understanding is correct.
+  Just write down what you thought would happen.
+-->
 
-### react-app-rewired
-1. 添加依赖
-```
-yarn add react-app-rewired@next --dev
-```
-2. 根据 [react-app-rewired 教程](https://github.com/timarney/react-app-rewired#how-to-rewire-your-create-react-app-project)更改配置
-
-### 其他依赖
-```
-yarn babel-plugin-import react-app-rewire-less-modules webpack-bundle-analyzer --dev
-```
-* babel-plugin-import : antd 按需加载
-* react-app-rewire-less-modules : less 支持与 less module
-* webpack-bundle-analyzer : build 统计工具
-* eslint-config-alloy : eslint 模板
+(Write what you thought would happen.)
+![image](https://user-images.githubusercontent.com/2703455/46127444-42056200-c263-11e8-8150-0da168d420c6.png)
 
 
-## 参考资料
-* [修改create-react-app支持多入口](http://imshuai.com/create-react-app-multiple-entry-points/)
-* [Add more entry points](https://github.com/facebook/create-react-app/issues/1084)
-* [react-app-rewired](https://github.com/timarney/react-app-rewired)
-* [在 create-react-app 中使用 antd](https://ant.design/docs/react/use-with-create-react-app-cn)
-* [以react-script重构antd-pro](https://xuqiang.me/%E4%BB%A5react-script%E9%87%8D%E6%9E%84antd-pro.html)
+### Actual Behavior
 
-## 遗留问题
-### Failed to decode param '/%PUBLIC_URL%/favicon.ico'
-```bash
-URIError: Failed to decode param '/%PUBLIC_URL%/favicon.ico'
-    at decodeURIComponent (<anonymous>)
-    at decode_param (D:\github\cra\node_modules\express\lib\router\layer.js:172:12)
-    at Layer.match (D:\github\cra\node_modules\express\lib\router\layer.js:123:27)
-    at matchLayer (D:\github\cra\node_modules\express\lib\router\index.js:574:18)
-    at next (D:\github\cra\node_modules\express\lib\router\index.js:220:15)
-    at expressInit (D:\github\cra\node_modules\express\lib\middleware\init.js:40:5)
-    at Layer.handle [as handle_request] (D:\github\cra\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (D:\github\cra\node_modules\express\lib\router\index.js:317:13)
-    at D:\github\cra\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (D:\github\cra\node_modules\express\lib\router\index.js:335:12)
-```
+<!--
+  Did something go wrong?
+  Is something broken, or not behaving as you expected?
+  Please attach screenshots if possible! They are extremely helpful for diagnosing issues.
+-->
 
-## Contributing
-我们非常欢迎你的贡献，你可以通过以下方式和我们一起共建 😃：
-* 通过 Issue 报告 bug 或进行咨询。
-* 提交 Pull Request 。
+(Write what happened. Please add screenshots!)
+![image](https://user-images.githubusercontent.com/2703455/46127475-5ea19a00-c263-11e8-9edd-11ffbf95d31c.png)
 
-## Licensing
-cra is [MIT licensed](./LICENSE).
+
+### Reproducible Demo
+
+<!--
+  If you can, please share a project that reproduces the issue.
+  This is the single most effective way to get an issue fixed soon.
+
+  There are two ways to do it:
+
+    * Create a new app and try to reproduce the issue in it.
+      This is useful if you roughly know where the problem is, or can’t share the real code.
+
+    * Or, copy your app and remove things until you’re left with the minimal reproducible demo.
+      This is useful for finding the root cause. You may then optionally create a new project.
+
+  This is a good guide to creating bug demos: https://stackoverflow.com/help/mcve
+  Once you’re done, push the project to GitHub and paste the link to it below:
+-->
+
+(Paste the link to an example project and exact instructions to reproduce the issue.)
+
+<!--
+  What happens if you skip this step?
+
+  We will try to help you, but in many cases it is impossible because crucial
+  information is missing. In that case we'll tag an issue as having a low priority,
+  and eventually close it if there is no clear direction.
+
+  We still appreciate the report though, as eventually somebody else might
+  create a reproducible example for it.
+
+  Thanks for helping us help you!
+-->

@@ -1,5 +1,3 @@
-# project can not work after update react-scripts form 2.0.0-next.a671462c to  2.0.0
-
 <!--
   PLEASE READ THE FIRST SECTION :-)
 -->
@@ -98,6 +96,20 @@ yes
 -->
 
 (paste the output of the command here)
+faild to run `create-react-app --info`
+Environment:
+  OS:  Windows 10
+  Node:  8.11.4
+  Yarn:  1.5.4
+  npm:  5.6.0
+  Watchman:  Not Found
+  Xcode:  N/A
+  Android Studio:  Not Found
+
+Packages: (wanted => installed)
+  react: ^16.5.2 => 16.5.2
+  react-dom: ^16.5.2 => 16.5.2
+  react-scripts: 2.0.0-next.a671462c => 2.0.0
 
 ### Steps to Reproduce
 
@@ -221,7 +233,7 @@ hub\app\node_modules\dva-core\lib'
 -->
 
 (Paste the link to an example project and exact instructions to reproduce the issue.)
-
+https://github.com/goblin-laboratory/cra/tree/demo
 <!--
   What happens if you skip this step?
 

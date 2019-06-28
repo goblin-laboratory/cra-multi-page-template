@@ -1,7 +1,7 @@
 module.exports = {
-  extends: [
-    'eslint-config-alloy/react',
-  ],
+  // parser: 'babel-eslint',
+  extends: ['react-app', 'airbnb', 'standard', 'prettier', 'prettier/react'],
+  plugins: ['prettier'],
   globals: {
     // 这里填入你的项目需要的全局变量
     // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
@@ -10,25 +10,25 @@ module.exports = {
     // ReactDOM: false
   },
   rules: {
-    // 这里填入你的项目需要的个性化配置，比如：
-    //
-    // @fixable 一个缩进必须用两个空格替代
-    'indent': ['error', 2, { SwitchCase: 1, flatTernaryExpressions: true }],
-    // @fixable jsx 的 children 缩进必须为两个空格
-    'react/jsx-indent': ['error', 2],
-    // @fixable jsx 的 props 缩进必须为两个空格
-    'react/jsx-indent-props': ['error', 2],
+    // 这里填入你的项目需要的个性化配置
     'yoda': [2, 'always'],
-    'no-undefined': 0,
-    // 数组中的 jsx 必须有 key
-    'react/jsx-key': 0,
-    'object-curly-spacing': 0,
-    'generator-star-spacing': 0,
+    'no-undefined': 1,
     'no-debugger': 1,
-    'prefer-promise-reject-errors': 0,
-    'no-undef': [0, {
-      "$": false,
-      "window": false
-    }],
-  }
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 120,
+        tabWidth: 2,
+        singleQuote: true,
+        trailingComma: 'all',
+      },
+    ],
+    'standard/no-callback-literal': [1, ["cb", "callback"]],
+    'jsx-a11y/anchor-is-valid': 1,
+    'jsx-a11y/label-has-for': 1,
+    'jsx-a11y/label-has-associated-control': 1,
+    'react/destructuring-assignment': 1,
+    'react/forbid-prop-types': 0,
+    'react/jsx-filename-extension': 0,
+  },
 };

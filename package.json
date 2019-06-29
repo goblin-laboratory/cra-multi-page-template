@@ -1,7 +1,26 @@
 {
-  "name": "cra",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cra-multi-page-template",
+  "description": "create-react-app 多页应用配置模板，包含 dva 和 ant-design，开启 PWA，兼容 IE11 。",
+  "version": "3.0.0",
+  "keywords": [
+    "create-react-app",
+    "react-app-rewired",
+    "dva",
+    "ant-design",
+    "PWA",
+    "multi-page",
+    "template"
+  ],
+  "homepage": "https://goblin-laboratory.github.io/cra-multi-page-template/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goblin-laboratory/cra-multi-page-template.git"
+  },
+  "authors": [
+    "xiaosongxiaosong <kunkkaco@gmail.com> (https://github.com/xiaosongxiaosong)"
+  ],
+  "license": "MIT",
+  "bugs": "https://github.com/goblin-laboratory/cra-multi-page-template/issues",
   "dependencies": {
     "ant-design-pro": "^2.3.2",
     "antd": "^3.19.8",

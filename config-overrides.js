@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 const {
   override,
   fixBabelImports,
@@ -11,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 paths.appIndexJs = `${paths.appSrc}/pages/index.js`;
-paths.appLoginJs = `${paths.appSrc}/pages/login.js`;
+// paths.appLoginJs = `${paths.appSrc}/pages/login.js`;
 paths.servedPath = './';
 
 const getEntryConfig = env => {

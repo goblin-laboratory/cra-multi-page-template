@@ -23,7 +23,7 @@
   "bugs": "https://github.com/goblin-laboratory/cra-multi-page-template/issues",
   "dependencies": {
     "ant-design-pro": "^2.3.2",
-    "antd": "^3.19.8",
+    "antd": "^3.21.1",
     "dva": "^2.4.1",
     "dva-loading": "^3.0.7",
     "prop-types": "^15.7.2",

@@ -3466,10 +3466,10 @@ csstype@^2.2.0:
   resolved "https://registry.npm.taobao.org/csstype/download/csstype-2.6.5.tgz#1cd1dff742ebf4d7c991470ae71e12bb6751e034"
   integrity sha1-HNHf90Lr9NfJkUcK5x4Su2dR4DQ=
 
-customize-cra@^0.2.14:
-  version "0.2.14"
-  resolved "https://registry.npm.taobao.org/customize-cra/download/customize-cra-0.2.14.tgz#41f9b2d96d9a318bec760c4c9b3dc9c26d5a7594"
-  integrity sha1-Qfmy2W2aMYvsdgxMmz3Jwm1adZQ=
+customize-cra@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/customize-cra/-/customize-cra-0.6.0.tgz#5eca0fff1d357f0299286990cb9252d5ed69c024"
+  integrity sha512-RzrJ/3Cg1piCMW7M028tpxcKism2Wmna7eCro1t/YHUMR8SnpM80JwqB1Ln6QdSAw4dz3SS9jZIJvw73LQONSQ==
   dependencies:
     lodash.flow "^3.5.0"
 

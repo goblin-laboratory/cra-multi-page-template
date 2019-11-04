@@ -4010,10 +4010,10 @@ dva-core@^1.4.0:
     redux-saga "^0.16.0"
     warning "^3.0.0"
 
-dva-loading@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.npm.taobao.org/dva-loading/download/dva-loading-3.0.7.tgz#9b9d004ff3a219c4f7fbb71fe15ecf7195b9284c"
-  integrity sha1-m50AT/OiGcT3+7cf4V7PcZW5KEw=
+dva-loading@^3.0.17:
+  version "3.0.17"
+  resolved "https://registry.yarnpkg.com/dva-loading/-/dva-loading-3.0.17.tgz#773239e36cba273c2b00ce50e792c9cc5d5b2b9b"
+  integrity sha512-qD2fENkDK/m9roAzHjvATdEvXL+MbtNv2dc5Ee0PHJPAKhZ6Tr1C2abkbUyWnYb0HPOYbwRghJJbgmq59sMDuA==
   dependencies:
     "@babel/runtime" "^7.0.0"
 

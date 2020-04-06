@@ -27,7 +27,7 @@
     "dva": "^2.4.1",
     "dva-loading": "^3.0.7",
     "prop-types": "^15.7.2",
-    "query-string": "^6.8.1",
+    "query-string": "^6.12.0",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",

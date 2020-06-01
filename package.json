@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.12.0",
-    "customize-cra": "^0.2.14",
+    "customize-cra": "^1.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^12.0.0",

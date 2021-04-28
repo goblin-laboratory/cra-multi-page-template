@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: query-string
+    versions:
+    - 6.13.8
+    - 6.14.0
+    - 6.14.1
+  - dependency-name: webpack-bundle-analyzer
+    versions:
+    - 4.4.0
